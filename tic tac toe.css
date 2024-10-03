@@ -10,11 +10,23 @@ body {
     align-items: center;
     height: 100vh;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #114144, #1b6874);
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .game-container {
     text-align: center;
+    background-color: #0e343a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .board {
@@ -23,6 +35,10 @@ body {
     grid-template-rows: repeat(3, 100px);
     gap: 10px;
     margin-bottom: 30px;
+    background-color: #243d41;
+    border: 5px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .cell {
@@ -30,33 +46,46 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    border: 3px solid #000000;
+    border: 3px solid #000;
     font-size: 3rem;
     font-weight: bold;
+    color: #114144;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease;
+    border-radius: 10px;
 }
 
 .cell:hover {
     background-color: #92a5aa;
+    transform: scale(1.05);
+}
+
+.cell:active {
+    transform: scale(0.95);
 }
 
 .game-info {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 12px 25px;
+    margin-top: 20px;
     border: none;
-    background-color: #000000;
-    color: white;
+    background-color: #000;
+    color: #fff;
     font-size: 2rem;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #162936;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }
